@@ -10,7 +10,7 @@ import subprocess
 import re
 import pdb
 
-path_re = re.compile('(.*/)?(.*)(\..*)?')
+path_re = re.compile('(.*/)?([^.]*)(\..*)?')
 temp_dir_path = 'temp/'
 
 def url_to_pdf(url):
@@ -58,12 +58,33 @@ def read_file(path):
     f.close()
     return data
 
+def ensure_ext(path, ext):
+    """Ensures that path ends in desired extension"""
+    search_res = path_re.search(path)
+
+    if search_res.group(3) == ext:
+        return path
+
+    wd = search_res.group(1)
+    file_name = search_res.group(2)
+    output_path = ''
+    if wd is not None:
+        output_path += wd
+    if file_name is not None:
+        output_path += file_name
+    output_path += ext
+    return output_path
+
 def create_pdf_from_url(url, output_path=temp_dir_path + 'out.txt'):
     """Creates PDF file from a webpage at URL using wkhtmltopdf command."""
+    if output_path != temp_dir_path + 'out.txt':
+        output_path = ensure_ext(output_path, '.txt')
     write_file(url_to_pdf(url), output_path)
 
 def create_txt_from_pdf(data, output_path=temp_dir_path + 'out.txt'):
     """Creates text file by converting PDF data into text with pdftotext command."""
+    if output_path != temp_dir_path + 'out.txt':
+        output_path = ensure_ext(output_path, '.txt')
     write_file(pdf_to_text(data), output_path)
 
 def create_txt_from_url(url, output_path=temp_dir_path + 'out.txt'):
@@ -74,13 +95,19 @@ def create_txt_from_url(url, output_path=temp_dir_path + 'out.txt'):
     command. Then converts PDF into text with pdftotext command. Does not create
     temporary files.
     """
+    if output_path != temp_dir_path + 'out.txt':
+        output_path = ensure_ext(output_path, '.txt')
     write_file(url_to_text(url), output_path)
 
 def main():
     """Used to test functionality of clearstream.py."""
     if not os.path.exists(temp_dir_path):
         os.makedirs(temp_dir_path)
-    create_txt_from_url('www.drudgereport.com')
+    create_txt_from_url('www.drudgereport.com', temp_dir_path + 'drudge_report.bad')
+    create_txt_from_url('http://status.rilin.state.ri.us/legislative_committee_calendar.aspx',
+                        temp_dir_path + 'ri_events')
+    create_txt_from_url('https://twitter.com/a16z', temp_dir_path + 'a16z.txt')
+
 
 if __name__ == '__main__':
     main()
