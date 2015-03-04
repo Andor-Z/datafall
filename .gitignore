@@ -1,0 +1,6 @@
+virt/
+trash/
+samples/
+*.pyc
+.coverage
+temp/
