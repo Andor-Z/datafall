@@ -5,6 +5,13 @@
 __author__      = 'Earl Lee'
 __copyright__   = 'Copyright 2015'
 
+"""
+Requires shell commands:
+- wkhtmltopdf
+- pdftotext
+
+"""
+
 import os
 import subprocess
 import re
@@ -81,11 +88,17 @@ def create_pdf_from_url(url, output_path=temp_dir_path + 'out.txt'):
         output_path = ensure_ext(output_path, '.txt')
     write_file(url_to_pdf(url), output_path)
 
-def create_txt_from_pdf(data, output_path=temp_dir_path + 'out.txt'):
+def _create_txt_from_pdf(data, output_path=temp_dir_path + 'out.txt'):
     """Creates text file by converting PDF data into text with pdftotext command."""
     if output_path != temp_dir_path + 'out.txt':
         output_path = ensure_ext(output_path, '.txt')
     write_file(pdf_to_text(data), output_path)
+
+def create_txt_from_pdf(path, output_path=temp_dir_path + 'out.txt'):
+    """Creates text file by converting PDF data into text with pdftotext command."""
+    if output_path != temp_dir_path + 'out.txt':
+        output_path = ensure_ext(output_path, '.txt')
+    write_file(pdf_to_text(read_file(path)), output_path)
 
 def create_txt_from_url(url, output_path=temp_dir_path + 'out.txt'):
     """
@@ -103,10 +116,11 @@ def main():
     """Used to test functionality of clearstream.py."""
     if not os.path.exists(temp_dir_path):
         os.makedirs(temp_dir_path)
-    create_txt_from_url('www.drudgereport.com', temp_dir_path + 'drudge_report.bad')
-    create_txt_from_url('http://status.rilin.state.ri.us/legislative_committee_calendar.aspx',
-                        temp_dir_path + 'ri_events')
-    create_txt_from_url('https://twitter.com/a16z', temp_dir_path + 'a16z.txt')
+    # create_txt_from_url('www.drudgereport.com', temp_dir_path + 'drudge_report.bad')
+    # create_txt_from_url('http://status.rilin.state.ri.us/legislative_committee_calendar.aspx',
+    #                     temp_dir_path + 'ri_events')
+    # create_txt_from_url('https://twitter.com/a16z', temp_dir_path + 'a16z.txt')
+    create_txt_from_url('http://www.iwf.net/results/olympic-records/', temp_dir_path + 'mens_olympic_records')
 
 
 if __name__ == '__main__':

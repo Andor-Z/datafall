@@ -40,6 +40,13 @@ Because the APIs for data on a website is only used by a small fraction of total
 - DataFall 0.30 - New methodologies and techniques for web scraping that may help mitigate damage caused to web scrapers by slight changes in page layout and design
 - Paper summarizing DataFall and detailing methodologies for robust web scraping
 
+#### Clearstream
+###### Deliverable - DataFall 0.30
+**Requirements:**
+- pdftotext 0.29.0
+- wkhtmltopdf 0.12.2.1 (with patched qt)
+
+
 #### REFERENCES
 [1] International Data Corporation. "The Digital Universe of Opportunities: Rich Data and the Increasing Value of the Internet of Things." Executive Summary: Data Growth, Business Opportunities, and the IT Imperatives. EMC Corporation, Apr. 2014. Web. 09 Feb. 2015.
 
