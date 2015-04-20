@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 
-"""clearstream_test.py: Tests for Clearstream library."""
+"""test.py: Tests for Clearstream library."""
 
 __author__      = 'Earl Lee'
 __copyright__   = 'Copyright 2015'
 
 import clearstream
+import dam
 import os
+import re
 
-def main():
+def test_clearstream():
     temp_dir_path = clearstream.temp_dir_path
 
     """Used to test functionality of clearstream.py."""
@@ -20,6 +22,23 @@ def main():
     # create_txt_from_url('https://twitter.com/a16z', temp_dir_path + 'a16z.txt')
     clearstream.create_txt_from_url('http://www.iwf.net/results/olympic-records/', temp_dir_path + 'mens_olympic_records_2')
     clearstream.create_txt_from_pdf('samples/Results_Book_Almaty2014.pdf')
+
+def test_dam():
+    mens_results_header = [
+        dict(name='category', pattern='\d{2,3}+?'),
+        dict(name='lift', pattern='snatch|clean|jerk', ignore_case=True),
+        dict(name='rank', pattern='\d{1}'),
+        dict(name='result', pattern='\d+'),
+        dict(name='name', pattern='(\w+ ?)+'),
+        dict(name='born', pattern='(\d\.),+'),
+        dict(name='nation', pattern='[a-z]+', ignore_case=True)
+    ]
+
+    dam.parse_table(mens_results_header, '  ', open('samples/mens-results.txt', 'r').read())
+
+def main():
+    # test_clearstream()
+    test_dam()
 
 if __name__ == '__main__':
     main()
