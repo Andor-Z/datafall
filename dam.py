@@ -5,19 +5,27 @@
 __author__      = 'Earl Lee'
 __copyright__   = 'Copyright 2015'
 
-"""
-Requires shell commands:
-- wkhtmltopdf
-- pdftotext
+# TODO: Automatically parse header row for labels.
+
+import re
+import pdb
+from collections import defaultdict
 
 """
-import re
-from collections import defaultdict
-import pdb
+dam.py is an input in the datafall aggregation pipeline.
+Its inputs get handled by waterfall.py, which structures the raw inputs and inserts them into the database.
+"""
+
+# TODO: Rename this function
+def _read_line(line, keywords, pattern):
+    """Processes line containing values for one attribute."""
+    # TODO: Find key
+    # TODO: Find pattern closest to key
+    # TODO: Eat the key
+    return
 
 def read_line(line, keywords, pattern):
-    """Processes line containing values for one attribute."""
-    # TODO
+    # TODO: Iterate through a line, consuming information piece-by-piece
     return
 
 def get_slots_list(values, text):
@@ -156,11 +164,5 @@ def parse_table(header, delimiter, text):
 
     for doc in collection:
         print doc
-
-    # TODO: Fill empty cells
-
-    # TODO: Read lines as rows
-
-        # TODO: Break down rows into pieces
 
     return
