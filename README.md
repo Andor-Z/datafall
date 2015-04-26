@@ -35,17 +35,10 @@ Because the APIs for data on a website is only used by a small fraction of total
 #### DELIVERABLES
 
 - DataFall 0.10 - A simple data mining framework that accepts scrapers and API scripts for a schema with a few models and relations between models
-- DataFall 0.20 - A more developed data mining framework that consumes data in real-time, as the information becomes available
-- DataFall 0.25 - A view of activity by each individual data input and components of the data pipeline
+- DataFall 0.20 - [DELAYED] A more developed data mining framework that consumes data in real-time, as the information becomes available
+- DataFall 0.25 - [DELAYED] A view of activity by each individual data input and components of the data pipeline
 - DataFall 0.30 - New methodologies and techniques for web scraping that may help mitigate damage caused to web scrapers by slight changes in page layout and design
 - Paper summarizing DataFall and detailing methodologies for robust web scraping
-
-#### Clearstream
-###### Deliverable - DataFall 0.30
-**Requirements:**
-- pdftotext 0.29.0
-- wkhtmltopdf 0.12.2.1 (with patched qt)
-
 
 #### REFERENCES
 [1] International Data Corporation. "The Digital Universe of Opportunities: Rich Data and the Increasing Value of the Internet of Things." Executive Summary: Data Growth, Business Opportunities, and the IT Imperatives. EMC Corporation, Apr. 2014. Web. 09 Feb. 2015.
