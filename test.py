@@ -7,13 +7,16 @@ __copyright__   = 'Copyright 2015'
 
 import clearstream
 import dam
+import waterfall
+import bridge
 import os
 import re
 
 def test_clearstream():
+    """Used to test functionality of clearstream.py."""
+
     temp_dir_path = clearstream.temp_dir_path
 
-    """Used to test functionality of clearstream.py."""
     if not os.path.exists(temp_dir_path):
         os.makedirs(temp_dir_path)
     # create_txt_from_url('www.drudgereport.com', temp_dir_path + 'drudge_report.bad')
@@ -34,7 +37,14 @@ def test_dam():
         dict(name='nation', pattern='[a-z]+', ignore_case=True)
     ]
 
-    dam.parse_table(mens_results_header, '  ', open('samples/mens-results.txt', 'r').read())
+    results = dam.parse_table(mens_results_header, '  ', open('temp/mens-results.txt', 'r').read())
+
+    athletes = [bridge.filter_dict(athlete, ('name', 'born', 'nation')) for athlete in results]
+    waterfall.insert_into_db('athletes', athletes)
+
+    lifts = [bridge.filter_dict(lift, ('name', 'born', 'nation', 'lift', 'result', 'rank', 'category')) for lift in results]
+    lifts = [bridge.link('athletes', 'athlete_id', ('name', 'born', 'nation'), lift) for lift in lifts]
+    waterfall.insert_into_db('lifts', lifts)
 
 def main():
     # test_clearstream()

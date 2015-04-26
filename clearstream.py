@@ -11,7 +11,6 @@ Requires shell commands:
 - pdftotext
 
 """
-
 import os
 import subprocess
 import re

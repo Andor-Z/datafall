@@ -5,13 +5,27 @@
 __author__      = 'Earl Lee'
 __copyright__   = 'Copyright 2015'
 
-# TODO: Implement fuzzy name matcher
-# TODO: Create filter to select what entities to match data to
-# TODO: Create data ingestor
-
 """
 waterfall.py calls on bridge.py to structure the input data to fit the database's schema.
 Once the input data is structured and validated, waterfall.py inserts that data into the database.
 """
 
+# TODO: Implement fuzzy name matcher
+# TODO: Create filter to select what entities to match data to
+# TODO: Create data ingestor
+# TODO: Structure input data using bridge.py
 
+import bridge
+import logging
+from pymongo import MongoClient
+
+client = MongoClient()
+db = client['test-database']
+logger = logging.getLogger()
+
+def insert_into_db(collection_name, payload, filter_keys=None):
+    collection = db[collection_name]
+    for doc in payload:
+        doc = doc if filter_keys is None else bridge.filter_dict(doc, filter_keys)
+        collection.update_one(doc, {'$set': doc}, upsert=True)
+    return True

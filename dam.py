@@ -147,8 +147,6 @@ def parse_table(header, delimiter, text):
 
     # Transpose body_rows inner lists contain values for one doc
     body_rows = [list(tpl) for tpl in zip(*body_rows)]
-    for row in body_rows:
-        print row
 
     # Create array of just header labels
     def get_name(x):
@@ -160,9 +158,7 @@ def parse_table(header, delimiter, text):
         return x.strip()
     def list_to_dict(x, labels, strip):
         return {k:v for k, v in zip(labels, map(strip, x))}
+
     collection = [list_to_dict(row, labels, strip) for row in body_rows]
 
-    for doc in collection:
-        print doc
-
-    return
+    return collection
