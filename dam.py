@@ -87,6 +87,7 @@ def expand_list(lst, filled):
     return lst
 
 def get_count_list(text):
+    """Returns array counting frequency in which a text character column has content."""
     if not isinstance(text, str):
         raise BaseException
 

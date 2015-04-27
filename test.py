@@ -23,8 +23,9 @@ def test_clearstream():
     # create_txt_from_url('http://status.rilin.state.ri.us/legislative_committee_calendar.aspx',
     #                     temp_dir_path + 'ri_events')
     # create_txt_from_url('https://twitter.com/a16z', temp_dir_path + 'a16z.txt')
-    clearstream.create_txt_from_url('http://www.iwf.net/results/olympic-records/', temp_dir_path + 'mens_olympic_records_2')
-    clearstream.create_txt_from_pdf('samples/Results_Book_Almaty2014.pdf')
+    # clearstream.create_txt_from_url('http://www.iwf.net/results/olympic-records/', temp_dir_path + 'mens_olympic_records_2')
+    clearstream.create_txt_from_url('http://www.iwf.net/results/results-by-events/?event=313', temp_dir_path + '2015EuropeanChampionships')
+    # clearstream.create_txt_from_pdf('samples/Results_Book_Almaty2014.pdf')
 
 def test_dam():
     mens_results_header = [
@@ -37,17 +38,21 @@ def test_dam():
         dict(name='nation', pattern='[a-z]+', ignore_case=True)
     ]
 
-    results = dam.parse_table(mens_results_header, '  ', open('temp/mens-results.txt', 'r').read())
+    results = [dam.parse_table(mens_results_header, '  ', open('temp/womens-results.txt', 'r').read()),
+               dam.parse_table(mens_results_header, '  ', open('temp/mens-results.txt', 'r').read())]
 
-    athletes = [bridge.filter_dict(athlete, ('name', 'born', 'nation')) for athlete in results]
-    waterfall.insert_into_db('athletes', athletes)
+    for result in results:
+        athletes = [bridge.filter_dict(athlete, ('name', 'born', 'nation')) for athlete in result]
+        waterfall.insert_into_db('athletes', athletes)
 
-    lifts = [bridge.filter_dict(lift, ('name', 'born', 'nation', 'lift', 'result', 'rank', 'category')) for lift in results]
-    lifts = [bridge.link('athletes', 'athlete_id', ('name', 'born', 'nation'), lift) for lift in lifts]
-    waterfall.insert_into_db('lifts', lifts)
+        lifts = [bridge.filter_dict(lift, ('name', 'born', 'nation', 'lift', 'result', 'rank', 'category')) for lift in result]
+        lifts = [bridge.link('athletes', 'athlete_id', ('name', 'born', 'nation'), lift) for lift in lifts]
+        waterfall.insert_into_db('lifts', lifts)
+
+        # XXX: Fix bug with Ahmed being in 'born' column
 
 def main():
-    # test_clearstream()
+    test_clearstream()
     test_dam()
 
 if __name__ == '__main__':

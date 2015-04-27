@@ -11,8 +11,6 @@ Once the input data is structured and validated, waterfall.py inserts that data 
 """
 
 # TODO: Implement fuzzy name matcher
-# TODO: Create filter to select what entities to match data to
-# TODO: Create data ingestor
 # TODO: Structure input data using bridge.py
 
 import bridge
@@ -28,4 +26,4 @@ def insert_into_db(collection_name, payload, filter_keys=None):
     for doc in payload:
         doc = doc if filter_keys is None else bridge.filter_dict(doc, filter_keys)
         collection.update_one(doc, {'$set': doc}, upsert=True)
-    return True
+    return
