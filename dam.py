@@ -109,13 +109,16 @@ def parse_table(header, delimiter, text):
 
     header_i = 0
 
+    # Get an array of just the header names in order
+    def get_name(x):
+        return x['name']
+    default_header_names = map(get_name, header)
+
     header_text = text[0:(text.find('\n') + 1)]
     body_text = text[text.find('\n') + 1:]
     body_rows = body_text.split('\n')
 
     # Maps character slots in a row to the header row value
-    def get_name(x):
-        return x['name']
     def not_none(x):
         return x is not None
 
@@ -126,12 +129,44 @@ def parse_table(header, delimiter, text):
 
     # Get delimiter indices
     delimiter_indices = []
+    curr_phrase_indices = []
     walker = -1
     for idx, value in enumerate(count_slots):
-        if value == 0 and walker != 0:
+        if idx != 0 and value == 0 and walker != 0:
             delimiter_indices.append(idx)
+
+            if len(delimiter_indices) > len(default_header_names):
+                break
+
+            # Check if this delimiter was set too early
+            assigned_header_label = default_header_names[len(delimiter_indices) - 1]
+
+            label_counts = defaultdict(int)
+            for _idx in curr_phrase_indices:
+                # Increment count for use of a specific label by the last seen word
+                if _idx >= len(header_slots):
+                    _idx = len(header_slots) - 1
+                label_counts[header_slots[_idx]] += 1
+
+            mode = 0
+            header_label_mode = None
+            for k, v in label_counts.iteritems():
+                # Find the label that overlaps most with current phrase using label_counts
+                if v > mode:
+                    header_label_mode = k
+                    mode = v
+
+            if header_label_mode != assigned_header_label:
+                delimiter_indices.pop()
+                temp = delimiter_indices.pop()
+                delimiter_indices.append(idx)
+
+            curr_phrase_indices = []
+        else:
+            curr_phrase_indices.append(idx)
         walker = value
     delimiter_indices.append(len(count_slots) - 1)
+    delimiter_indices.insert(0, 0)
 
     # Split each text row into an array of values
     def split_row(row, delimiter_indices):
