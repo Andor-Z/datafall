@@ -133,13 +133,9 @@ def parse_table(header, delimiter, text):
     walker = -1
     for idx, value in enumerate(count_slots):
         if idx != 0 and value == 0 and walker != 0:
-            delimiter_indices.append(idx)
 
-            if len(delimiter_indices) > len(default_header_names):
-                break
-
-            # Check if this delimiter was set too early
-            assigned_header_label = default_header_names[len(delimiter_indices) - 1]
+            # Check if we should add this index as delimiter
+            assigned_header_label = default_header_names[len(delimiter_indices)]
 
             label_counts = defaultdict(int)
             for _idx in curr_phrase_indices:
@@ -158,15 +154,17 @@ def parse_table(header, delimiter, text):
 
             if header_label_mode != assigned_header_label:
                 delimiter_indices.pop()
-                temp = delimiter_indices.pop()
-                delimiter_indices.append(idx)
 
+            delimiter_indices.append(idx)
             curr_phrase_indices = []
         else:
             curr_phrase_indices.append(idx)
+
         walker = value
-    delimiter_indices.append(len(count_slots) - 1)
+
+    # Add start and end delimiters
     delimiter_indices.insert(0, 0)
+    delimiter_indices.append(len(count_slots) - 1)
 
     # Split each text row into an array of values
     def split_row(row, delimiter_indices):

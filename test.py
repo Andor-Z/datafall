@@ -11,6 +11,10 @@ import waterfall
 import bridge
 import os
 import re
+from pymongo import MongoClient
+
+client = MongoClient()
+db = client['test-database']
 
 def test_clearstream():
     """Used to test functionality of clearstream.py."""
@@ -28,6 +32,10 @@ def test_clearstream():
     # clearstream.create_txt_from_pdf('samples/Results_Book_Almaty2014.pdf')
 
 def test_dam():
+    # Clean database
+    db['athletes'].remove({})
+    db['lifts'].remove({})
+
     mens_results_header = [
         dict(name='category', pattern='\d{2,3}+?'),
         dict(name='lift', pattern='snatch|clean|jerk', ignore_case=True),
