@@ -43,6 +43,15 @@ def import_iwf_results():
         dict(name='nation', pattern='[a-z]+', ignore_case=True)
     ]
 
+    lifts_dict = {
+        'Snatch' : 'snatch',
+        'C&Jerk' : 'cleanjerk',
+        'Total' : 'total'
+    }
+    def convert_lift(original):
+        original['lift'] = lifts_dict[original['lift']]
+        return original
+
     results = [dam.parse_text_table(mens_results_header, '  ', open('temp/womens-results.txt', 'r').read()),
                dam.parse_text_table(mens_results_header, '  ', open('temp/mens-results.txt', 'r').read())]
 
@@ -52,34 +61,33 @@ def import_iwf_results():
 
         lifts = [bridge.filter_dict(lift, ('name', 'born', 'nation', 'lift', 'result', 'rank', 'category')) for lift in result]
         lifts = [bridge.link('athletes', 'athlete_id', ['name', 'born', 'nation'], lift) for lift in lifts]
+        # TODO: This conversion should be handled automatically, i.e. standardization of values
+        lifts = [convert_lift(lift) for lift in lifts]
         waterfall.insert_into_db('lifts', lifts)
 
 def import_usaw_results():
-    # db['athletes'].remove({})
-    # db['lifts'].remove({})
-
     results = dam.parse_csv_table('sample_pdfs/oklahoma-meet-results-processed.csv')
     athletes = [bridge.filter_dict(athlete, collection='athletes') for athlete in results]
     waterfall.insert_into_db('athletes', athletes)
 
-    lifts = [bridge.filter_dict(lift, keys=['name', 'body weight', 'snatch', 'cleanjerk', 'total', 'event', 'date']) for lift in results]
+    lifts = [bridge.filter_dict(lift, keys=['name', 'bodyweight', 'snatch', 'cleanjerk', 'total', 'event', 'date']) for lift in results]
 
     # Split lifts into three docs for snatch, clean and jerk, and total
-    snatches = [bridge.filter_dict(lift, keys=['name', 'body weight', 'snatch', 'event', 'date']) for lift in lifts]
+    snatches = [bridge.filter_dict(lift, keys=['name', 'bodyweight', 'snatch', 'event', 'date']) for lift in lifts]
     for snatch in snatches:
-        snatch['lift'] = 'Snatch'
+        snatch['lift'] = 'snatch'
         snatch['result'] = snatch['snatch']
         del snatch['snatch']
 
-    cleanjerks = [bridge.filter_dict(lift, keys=['name', 'body weight', 'cleanjerk', 'event', 'date']) for lift in lifts]
+    cleanjerks = [bridge.filter_dict(lift, keys=['name', 'bodyweight', 'cleanjerk', 'event', 'date']) for lift in lifts]
     for cleanjerk in cleanjerks:
-        cleanjerk['lift'] = 'C&Jerk'
+        cleanjerk['lift'] = 'cleanjerk'
         cleanjerk['result'] = cleanjerk['cleanjerk']
         del cleanjerk['cleanjerk']
 
-    totals = [bridge.filter_dict(lift, keys=['name', 'body weight', 'total', 'event', 'date']) for lift in lifts]
+    totals = [bridge.filter_dict(lift, keys=['name', 'bodyweight', 'total', 'event', 'date']) for lift in lifts]
     for total in totals:
-        total['lift'] = 'Total'
+        total['lift'] = 'total'
         total['result'] = total['total']
         del total['total']
 
@@ -87,11 +95,14 @@ def import_usaw_results():
     lifts = [bridge.link('athletes', 'athlete_id', ['name'], lift) for lift in lifts]
     waterfall.insert_into_db('lifts', lifts)
 
+def clean_database():
+    """Clean database"""
+    db['athletes'].remove({})
+    db['lifts'].remove({})
+    db['events'].remove({})
+
 def main():
-    # Clean database
-    # db['athletes'].remove({})
-    # db['lifts'].remove({})
-    # db['events'].remove({})
+    clean_database()
     import_iwf_results()
     import_usaw_results()
 
