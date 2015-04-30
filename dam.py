@@ -9,6 +9,9 @@ __copyright__   = 'Copyright 2015'
 
 import re
 import pdb
+import os
+import csv
+import StringIO
 from collections import defaultdict
 
 """
@@ -104,7 +107,7 @@ def get_count_list(text):
 
     return counts_list
 
-def parse_table(header, delimiter, text):
+def parse_text_table(header, delimiter, text):
     """Processes textual table into multiple entities, entities being rows."""
 
     header_i = 0
@@ -194,5 +197,25 @@ def parse_table(header, delimiter, text):
         return {k:v for k, v in zip(labels, map(strip, x))}
 
     collection = [list_to_dict(row, labels, strip) for row in body_rows]
+
+    return collection
+
+def parse_csv_table(data, delimiter=','):
+    # Get just the CSV text
+    if isinstance(data, file):
+        pass
+    elif isinstance(data, str) and os.path.exists(data):
+        data = open(data, 'r')
+    elif isinstance(data, str):
+        data = StringIO.StringIO(data)
+    else:
+        return None
+
+    reader = csv.reader(data)
+    header_row = reader.next()
+
+    def list_to_dict(keys, values):
+        return {k:v for k, v in zip(keys, values)}
+    collection = [list_to_dict(header_row, row) for row in reader]
 
     return collection

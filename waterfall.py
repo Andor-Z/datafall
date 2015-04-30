@@ -10,9 +10,6 @@ waterfall.py calls on bridge.py to structure the input data to fit the database'
 Once the input data is structured and validated, waterfall.py inserts that data into the database.
 """
 
-# TODO: Implement fuzzy name matcher
-# TODO: Structure input data using bridge.py
-
 import bridge
 import logging
 from pymongo import MongoClient

@@ -20,21 +20,18 @@ def test_clearstream():
     """Used to test functionality of clearstream.py."""
 
     temp_dir_path = clearstream.temp_dir_path
-
     if not os.path.exists(temp_dir_path):
         os.makedirs(temp_dir_path)
-    # create_txt_from_url('www.drudgereport.com', temp_dir_path + 'drudge_report.bad')
-    # create_txt_from_url('http://status.rilin.state.ri.us/legislative_committee_calendar.aspx',
-    #                     temp_dir_path + 'ri_events')
-    # create_txt_from_url('https://twitter.com/a16z', temp_dir_path + 'a16z.txt')
-    # clearstream.create_txt_from_url('http://www.iwf.net/results/olympic-records/', temp_dir_path + 'mens_olympic_records_2')
-    clearstream.create_txt_from_url('http://www.iwf.net/results/results-by-events/?event=313', temp_dir_path + '2015EuropeanChampionships')
-    # clearstream.create_txt_from_pdf('samples/Results_Book_Almaty2014.pdf')
 
-def test_dam():
-    # Clean database
-    db['athletes'].remove({})
-    db['lifts'].remove({})
+    sources = [
+        ('http://www.iwf.net/results/results-by-events/?event=313', temp_dir_path + '2015EuropeanChampionships'),
+        ('samples/Results_Book_Almaty2014.pdf', temp_dir_path + 'Results_Book_Almaty2014')
+    ]
+
+    clearstream.create_txt_from_url(sources[0][0], sources[0][1])
+    clearstream.create_txt_from_pdf(sources[1][0])
+
+def import_iwf_results():
 
     mens_results_header = [
         dict(name='category', pattern='\d{2,3}+?'),
@@ -46,22 +43,57 @@ def test_dam():
         dict(name='nation', pattern='[a-z]+', ignore_case=True)
     ]
 
-    results = [dam.parse_table(mens_results_header, '  ', open('temp/womens-results.txt', 'r').read()),
-               dam.parse_table(mens_results_header, '  ', open('temp/mens-results.txt', 'r').read())]
+    results = [dam.parse_text_table(mens_results_header, '  ', open('temp/womens-results.txt', 'r').read()),
+               dam.parse_text_table(mens_results_header, '  ', open('temp/mens-results.txt', 'r').read())]
 
     for result in results:
         athletes = [bridge.filter_dict(athlete, ('name', 'born', 'nation')) for athlete in result]
         waterfall.insert_into_db('athletes', athletes)
 
         lifts = [bridge.filter_dict(lift, ('name', 'born', 'nation', 'lift', 'result', 'rank', 'category')) for lift in result]
-        lifts = [bridge.link('athletes', 'athlete_id', ('name', 'born', 'nation'), lift) for lift in lifts]
+        lifts = [bridge.link('athletes', 'athlete_id', ['name', 'born', 'nation'], lift) for lift in lifts]
         waterfall.insert_into_db('lifts', lifts)
 
-        # XXX: Fix bug with Ahmed being in 'born' column
+def import_usaw_results():
+    # db['athletes'].remove({})
+    # db['lifts'].remove({})
+
+    results = dam.parse_csv_table('sample_pdfs/oklahoma-meet-results-processed.csv')
+    athletes = [bridge.filter_dict(athlete, collection='athletes') for athlete in results]
+    waterfall.insert_into_db('athletes', athletes)
+
+    lifts = [bridge.filter_dict(lift, keys=['name', 'body weight', 'snatch', 'cleanjerk', 'total', 'event', 'date']) for lift in results]
+
+    # Split lifts into three docs for snatch, clean and jerk, and total
+    snatches = [bridge.filter_dict(lift, keys=['name', 'body weight', 'snatch', 'event', 'date']) for lift in lifts]
+    for snatch in snatches:
+        snatch['lift'] = 'Snatch'
+        snatch['result'] = snatch['snatch']
+        del snatch['snatch']
+
+    cleanjerks = [bridge.filter_dict(lift, keys=['name', 'body weight', 'cleanjerk', 'event', 'date']) for lift in lifts]
+    for cleanjerk in cleanjerks:
+        cleanjerk['lift'] = 'C&Jerk'
+        cleanjerk['result'] = cleanjerk['cleanjerk']
+        del cleanjerk['cleanjerk']
+
+    totals = [bridge.filter_dict(lift, keys=['name', 'body weight', 'total', 'event', 'date']) for lift in lifts]
+    for total in totals:
+        total['lift'] = 'Total'
+        total['result'] = total['total']
+        del total['total']
+
+    lifts = snatches + cleanjerks + totals
+    lifts = [bridge.link('athletes', 'athlete_id', ['name'], lift) for lift in lifts]
+    waterfall.insert_into_db('lifts', lifts)
 
 def main():
-    test_clearstream()
-    test_dam()
+    # Clean database
+    # db['athletes'].remove({})
+    # db['lifts'].remove({})
+    # db['events'].remove({})
+    import_iwf_results()
+    import_usaw_results()
 
 if __name__ == '__main__':
     main()
