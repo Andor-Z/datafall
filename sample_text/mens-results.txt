@@ -1,0 +1,73 @@
+CATEGORY LIFT RANK RESULT                NAME                         BORN NATION
+                1    135 THACH Kim Tuan                           15.01.1994 VIE
+        Snatch  2    134 LI Fabin                                 15.01.1993 CHN
+                3    133 LONG Qingquan                            03.12.1990 CHN
+                1    168 OM Yun Chol                              18.11.1991 PRK
+   56   C&Jerk  2    161 THACH Kim Tuan                           15.01.1994 VIE
+                3    160 LONG Qingquan                            03.12.1990 CHN
+                1    296 OM Yun Chol                              18.11.1991 PRK
+        Total   2    296 THACH Kim Tuan                           15.01.1994 VIE
+                3    293 LONG Qingquan                            03.12.1990 CHN
+                1    150 KIM Un Guk                               28.10.1988 PRK
+        Snatch  2    142 DING Jianjun                             06.10.1989 CHN
+                3    141 MOSQUERA LOZANO Luis Javier              27.03.1995 COL
+                1    175 KIM Un Guk                               28.10.1988 PRK
+   62   C&Jerk  2    175 IRAWAN Eko Yuli                          24.07.1989 INA
+                3    171 HASBI Muhamad                            12.07.1992 INA
+                1    325 KIM Un Guk                               28.10.1988 PRK
+        Total   2    316 IRAWAN Eko Yuli                          24.07.1989 INA
+                3    312 DING Jianjun                             06.10.1989 CHN
+                1    166 LIAO Hui                                 05.10.1987 CHN
+        Snatch  2    154 CHEN Oleg                                22.11.1988 RUS
+                3    152 MAHMOUD Mohamed Ihab Youssef Ahmed       21.11.1989 EGY
+                1    193 LIAO Hui                                 05.10.1987 CHN
+   69   C&Jerk  2    182 MAHMOUD Mohamed Ihab Youssef Ahmed       21.11.1989 EGY
+                3    182 KIM Myong Hyok                           03.12.1990 PRK
+                1    359 LIAO Hui                                 05.10.1987 CHN
+        Total   2    334 MAHMOUD Mohamed Ihab Youssef Ahmed       21.11.1989 EGY
+                3    334 KIM Myong Hyok                           03.12.1990 PRK
+                1    171 GODELLI Daniel                           10.01.1992 ALB
+        Snatch  2    171 ZHONG Guoshun                            05.08.1987 CHN
+                3    163 KIM Kwang Song                           19.02.1992 PRK
+                1    200 KIM Kwang Song                           19.02.1992 PRK
+   77   C&Jerk  2    198 GODELLI Daniel                           10.01.1992 ALB
+                3    196 ZHONG Guoshun                            05.08.1987 CHN
+                1    369 GODELLI Daniel                           10.01.1992 ALB
+        Total   2    367 ZHONG Guoshun                            05.08.1987 CHN
+                3    363 KIM Kwang Song                           19.02.1992 PRK
+                1    179 MARKOV Ivan                              14.09.1988 BUL
+        Snatch  2    178 ROSTAMI Kianoush                         23.07.1991 IRI
+                3    175 RYBAKOU Andrei                           04.03.1982 BLR
+                1    213 ROSTAMI Kianoush                         23.07.1991 IRI
+   85   C&Jerk 2     213 ALIMOV Ulugbek                           06.04.1989 UZB
+                3    211 OKULOV Artem                             05.05.1994 RUS
+                1    391 ROSTAMI Kianoush                         23.07.1991 IRI
+        Total   2    390 MARKOV Ivan                              14.09.1988 BUL
+                3    385 OKULOV Artem                             05.05.1994 RUS
+                1    188 SEDOV Vladimir                           02.03.1988 KAZ
+        Snatch  2    185 DIDZBALIS Aurimas                        13.06.1991 LTU
+                3    179 KYDYRBAYEV Zhassulan                     28.08.1992 KAZ
+                1    229 KYDYRBAYEV Zhassulan                     28.08.1992 KAZ
+   94   C&Jerk 2     221 LIU Hao                                  20.07.1989 CHN
+                3    219 SEDOV Vladimir                           02.03.1988 KAZ
+                1    408 KYDYRBAYEV Zhassulan                     28.08.1992 KAZ
+        Total   2    407 SEDOV Vladimir                           02.03.1988 KAZ
+                3    399 DIDZBALIS Aurimas                        13.06.1991 LTU
+                1    193 NURUDINOV Ruslan                         24.11.1991 UZB
+        Snatch  2    191 YANG Zhe                                 14.07.1991 CHN
+                3    190 ILYIN Ilya                               24.05.1988 KAZ
+                1    242 ILYIN Ilya                               24.05.1988 KAZ
+   105  C&Jerk 2     240 BEDZHANYAN David                         06.09.1988 RUS
+                3    239 NURUDINOV Ruslan                         24.11.1991 UZB
+                1    432 ILYIN Ilya                               24.05.1988 KAZ
+        Total   2    432 NURUDINOV Ruslan                         24.11.1991 UZB
+                3    427 BEDZHANYAN David                         06.09.1988 RUS
+                1    210 ALBEGOV Ruslan                           26.01.1988 RUS
+        Snatch  2    206 SALIMIKORDASIABI Behdad                  08.12.1989 IRI
+                3    199 ZHARNASEK Yauheni                        09.08.1987 BLR
+                1    257 LOVCHEV Aleksei                          13.06.1989 RUS
+  +105  C&Jerk 2     252 ALBEGOV Ruslan                           26.01.1988 RUS
+                3    251 SALIMIKORDASIABI Behdad                  08.12.1989 IRI
+                1    462 ALBEGOV Ruslan                           26.01.1988 RUS
+        Total   2    457 SALIMIKORDASIABI Behdad                  08.12.1989  IRI
+                3    436 MASSOUD Mohamed Ehsan Attia              11.01.1984 EGY

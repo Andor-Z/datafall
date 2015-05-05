@@ -1,0 +1,201 @@
+    56	kg	Men
+Rank   Name                                        Born          Nation   B.weight Group   Snatch    CI&Jerk   Total
+1      THACH	Kim	Tuan                              15.01.1994    VIE       55.69     A       133        160    293
+
+2      KRUAITHONG	Sinphet                          22.08.1995    THA       55.68     A       111        144    255
+
+3      SCARANTINO	Mirco                            16.01.1995    ITA       55.89     A       112        143    255
+
+4      SERNA	MENDOZA	Jhon	Jairo                    03.12.1994    COL       55.90     A       112        141    253
+5      MINGMOON	Witoon                             10.02.1996    THA       55.27     A       100        141    241
+6      ALBACHACHI	Ali	Ahmed	Abd	Ali                23.04.1994    IRQ       55.40     A       106        135    241
+7      BARNES	Darren	Lamar                         20.01.1994    USA       56.00     A       111        130    241
+
+8      HIGUITA	BARRERA	Luis	Fernando               10.01.1997    COL       55.52     A       108        130    238
+9      GUERRERO	MALTE	Jefferson	David              11.01.1995    ECU       55.36     B       105        126    231
+10     JU	Jinpyo                                   04.08.1994    KOR       55.88     A       105        125    230
+11     OSHIDA	Shin                                 29.07.1994    JPN       55.70     B       101        126    227
+
+12     MOTOKI	Kazuma                               03.08.1994    JPN       55.46     A       100        124    224
+13     GOVDELI	Furkan                              28.07.1994    TUR       55.84     B        97        125    222
+
+14     LOPEZ	CARRANZA	Brandy                       15.10.1998    PER       56.00     B        90        125    215
+
+15     SON	Igor                                    16.11.1998    KAZ       54.27     B        94        120    214
+16     VALLECILLO	LEDESMA	Vicente	Jesus            05.01.1997    MEX       54.78     B        91        118    209
+       Manuel
+
+17     AL-BADRI	Karrar	Hameed	Zayed                03.09.1998    IRQ       55.74     B        86        116    202
+
+---    VIZITIU	Daniel-Florin                       30.01.1996    ROU       55.78     A        ---       120      ---
+
+
+
+    62	kg	Men
+
+Rank   Name                                        Born          Nation   B.weight Group   Snatch    CI&Jerk   Total
+1      MOSQUERA	LOZANO	Luis	Javier                 27.03.1995    COL       61.81     A       137        165    302
+
+2      MO	Yongxiang                                10.04.1996    CHN       61.44     A       136        161    297
+3      OUERTANI	Marouan                            28.04.1995    TUN       61.64     A       121        154    275
+4      SAISAART	Worachet                           02.07.1994    THA       61.83     A       114        154    268
+
+5      SUHAREVS	Ritvars                            11.01.1999    LAT       61.49     A       120        145    265
+6      ZURITA	VALLEJO	Victor	Xavier                11.11.1995    ECU       61.19     B       115        141    256
+7      PRECIADO	REYES	Miguel	Angel                 03.11.1994    PER       61.82     B       112        142    254
+
+8      BARNES	Darrel	Lamont                        20.01.1994    USA       61.46     A       118        135    253
+
+9      KONNAI	Mitsunori                            14.03.1996    JPN       62.00     A       112        141    253
+10     DROZDOV	Mikhail                             13.02.1997    KAZ       61.95     B       115        135    250
+11     IBRAHIM	Moustafa	Wahid	Shaaban              01.12.1996    EGY       62.00     A       110        140    250
+
+12     OKYAY	Ahmet	Turan                           05.06.1996    TUR       61.61     A       112        135    247
+13     HUANG	Ding-Chieh                            20.03.1994    TPE       61.74     B       106        140    246
+14     RODRIGUEZ	MUNOZ	Oscar	Damian                23.05.1997    MEX       61.00     B       105        140    245
+15     KHASSAROV	Timur                             13.07.1997    KAZ       61.14     B       110        125    235
+16     DELANEY	James	Joseph                        29.07.1996    AUS       58.17     B        83        106    189
+17     ROZNIK	NOVAK	Jus                            15.11.1996    SLO       59.50     B        81        107    188
+---    SULTANOV	Rahmatjan                          01.12.1994    TKM       61.88     A       110         ---     ---
+
+    77	kg	Men
+Rank   Name                                 Born         Nation   B.weight Group   Snatch   CI&Jerk   Total
+1      SU	Ying                              02.01.1994   CHN       76.35     A       158       190    348
+
+2      MOHAMED	Maged	Emad	Gouda             10.06.1994   EGY       76.45     A       148       191    339
+3      ASHYROV	Dayanch                      30.03.1994   TKM       76.39     A       143       169    312
+
+4      SLOWIKOWSKI	Patryk                   04.12.1994   POL       76.70     A       138       169    307
+5      GEDIK	Sadrettin                      05.05.1997   TUR       75.46     A       136       160    296
+
+6      BOLANOS	RIVERA	Erlen	Cornelio        16.11.1994   ECU       74.56     B       131       164    295
+7      TABA	Kojum                           18.06.1997   IND       73.11     B       128       160    288
+
+8      DAMRON	Nathan	Charles                06.05.1996   USA       76.81     B       130       155    285
+9      CONTRERAS	ALVEAR	Kleber	Francisco    11.05.1995   ECU       74.89     B       126       154    280
+
+10     SMAJILA	Luka                         24.01.1994   SLO       75.09     B       108       126    234
+---    BETANCUR	MANCILLA	Diego	F.           15.06.1994   COL       76.75     A        ---      171      ---
+
+---    GETTS	Victor                         24.02.1994   RUS       76.27     A       155        ---     ---
+---    CHOSZCZ	Aleksander	Artur             15.11.1995   POL       71.00     B       125        ---     ---
+
+
+
+    85	kg	Men
+Rank   Name                                 Born         Nation   B.weight Group   Snatch   CI&Jerk   Total
+1      OKULOV	Artem                         05.05.1994   RUS       84.82     A       165       197    362
+2      ZHAO	Yongchao                        16.03.1995   CHN       84.08     A       145       196    341
+
+3      PIZZOLATO	Antonino                   20.08.1996   ITA       84.84     A       149       185    334
+4      BULAT	Iurie                          06.10.1994   MDA       83.50     A       157       172    329
+
+5      SANTANA	PERALTA	Junior	De	Jesus      08.01.1996   ESP       84.20     B       143       181    324
+6      MORENO	TORRES	Jhor	Esneider          02.10.1995   COL       80.38     A       144       173    317
+
+7      KIM	Woosik                           07.02.1994   KOR       84.42     A       147       170    317
+
+8      PAREDES	Lesman                       05.03.1996   COL       84.48     A       147       167    314
+9      PELC	Mateusz                         12.07.1994   POL       83.72     B       140       170    310
+
+10     MARTINS	Romario	Paulo                03.08.1994   BRA       84.56     B       140       165    305
+11     WOELMER	Paul	Frederick               10.04.1994   USA       82.62     B       130       165    295
+
+12     VALADEZ	BANDERAS	Moises	Eduardo      09.04.1994   MEX       84.94     B       134       161    295
+13     TURAN	Emre                           01.09.1997   TUR       80.52     B       127       163    290
+14
+Rank   DEMIDOV	Stanislav
+       Name                                16.05.1997
+                                           Born         KAZ
+                                                        Nation   B.weight B
+                                                                  80.62 Group       127
+                                                                                  Snatch      163
+                                                                                           CI&Jerk   290
+                                                                                                     Total
+15     FORTE	Clemson	Hunter                25.10.1994   USA       84.26     B       130       158    288
+
+---    DOBREA	Valentin                     14.04.1996   ROU       84.68     A       142        ---     ---
+---    HASSAN	Ammar	Hassan	Mabrouk         22.09.1994   EGY       84.68     A       149        ---     ---
+
+
+
+    94	kg	Men
+Rank   Name                                Born         Nation   B.weight Group   Snatch   CI&Jerk   Total
+1      KOSOV	Alexei                        29.07.1994   RUS       92.66     A       173       205    378
+2      GUIDEA	Marcel                       03.03.1995   MDA       93.51     A       165       204    369
+
+3      KUDAEV	Zhamal                       21.11.1994   RUS       93.70     A       157       200    357
+4      WEBSTER	Sonny	Curtis                10.03.1994   GBR       92.92     A       138       183    321
+
+5      ANDRADE	PADILLA	Brayan	Alexander    26.06.1994   ECU       91.45     A       135       181    316
+6      HOIM	Sebastian	Maciej               02.12.1994   POL       90.65     A       148       167    315
+
+7      PEREZ	FUENTES	Rigoberto             13.03.1994   MEX       93.10     A       142       170    312
+8      SIMON	Bence                         29.08.1996   HUN       88.78     B       140       171    311
+
+9      QUINTAL	GOROCICA	Jael	Alberto       22.10.1997   MEX       93.53     B       141       170    311
+
+10     FERRIN	ARROYO	Paul	Alexander        20.10.1995   ECU       92.46     B       137       168    305
+11     TOUAIRI	Aymen                       11.09.1998   ALG       92.93     B       136       160    296
+
+12     TURAN	Halil	Ibrahim                 10.03.1995   TUR       92.94     B       128       167    295
+13     YARA	Ichiro                         04.12.1995   JPN       93.64     B       130       163    293
+
+14     BOZAN	Ahmet                         23.06.1997   TUR       86.24     B       135       155    290
+---    MOTRICALA	Andrian                   24.05.1994   MDA       93.17     A        ---       ---     ---
+
+
+
+    105	kg	Men
+Rank   Name                                Born         Nation   B.weight Group   Snatch   CI&Jerk   Total
+1      SAMORAJ	Jaroslaw	Pawel              16.06.1994   POL       98.79     A       165       208    373
+2      BIDANI	Walid                        11.06.1994   ALG      104.53     A       170       200    370
+
+3      KUPTSOV	Georgii                     15.10.1994   RUS       94.50     A       168       200    368
+4      KO	Seunghwan                        18.02.1994   KOR      102.44     A       152       198    350
+
+5      GOH	Geunhyeong                      17.10.1994   KOR      104.19     A       156       192    348
+6      MKRTCHYAN	Mkrtich                   14.08.1994   ARM       97.28     A       152       187    339
+
+7      FORSTER	Philipp                     14.02.1994   AUT      101.69     A       152       185    337
+8      SAPARGELDIYEV	Dovletmyrat           27.04.1994   TKM      102.49     A       152       185    337
+
+9      LEE	Hao-Jan                         28.07.1994   TPE      104.75     A       140       185    325
+---    WILSON	Ian	Burdick                  08.01.1994   USA      101.98     A        ---      200      ---
+
+DSQ KUBYSHKOVSKYI	Leonid                   04.06.1994   UKR      104.65     A        ---       ---     ---
+DSQ KUROUSKI	Rychard                       08.09.1996   BLR      104.90     A        ---       ---     ---
+
+
+
+    +105	kg	Men
+Rank   Name                                Born         Nation   B.weight Group   Snatch   CI&Jerk   Total
+1      SAVCHUK	Antoniy                     20.11.1995   RUS      127.75     A       175       220    395
+
+2      HWANG	Wooman                        12.07.1995   KOR      132.25     A       176       207    383
+3      GABER	Ahmed	Mohamed	Abdelhamed	M.   18.01.1996   EGY      118.47     A       160       202    362
+
+4      MURAKAMI	Eishiro                    08.08.1995   JPN      127.19     A       162       200    362
+
+5      LOZINSKI	Bartosz                    30.07.1994   POL      135.85     A       166       191    357
+
+6      CHINEN	Kosuke                       06.01.1996   JPN      146.95     A       164       190    354
+7      KAJDOCI	Tamas                       21.04.1997   SRB      121.09     B       150       190    340
+
+8      COSSIO	Santiago	Sanchez             03.08.1995   COL      114.35     B       156       180    336
+
+9      AUGUSTYNIAK	Krystian                26.08.1996   POL      115.79     B       142       185    327
+
+10     AL-HASANI	Ali	Mahmood	Ghaeb         08.11.1994   IRQ      138.08     B       142       185    327
+11     CARABALI	QUINTERO	Milton	Elias      20.09.1995   ECU      141.05     A       140       186    326
+
+12     MEDINA	JOSUE	Andueza	Said           15.06.1998   MEX      114.20     B       140       173    313
+
+13     MANRIQUEZ	COLLINS	Raul	Enrique      09.04.1997   MEX      160.10     B       130       180    310
+
+14     ELJADID	Abdalla	Salem               21.01.1995   LBA      137.35     B       136       164    300
+
+15     BASTUG	Bestami                      17.03.1995   TUR      109.25     B       120       160    280
+
+---    KODIROV	Zufar                       29.01.1994   UZB      137.07     A       145        ---     ---
+---    SHAW	Gordon                         23.06.1994   RSA      116.05     A        ---      185      ---

@@ -25,11 +25,12 @@ def test_clearstream():
 
     sources = [
         ('http://www.iwf.net/results/results-by-events/?event=313', temp_dir_path + '2015EuropeanChampionships'),
-        ('samples/Results_Book_Almaty2014.pdf', temp_dir_path + 'Results_Book_Almaty2014')
+        ('samples/Results_Book_Almaty2014.pdf', temp_dir_path + 'Results_Book_Almaty2014'),
+        ('http://espn.go.com/college-football/player/_/id/529898/tyler-varga', temp_dir_path + 'varga-espn-profile'),
+        ('sample_pdfs/varga-espn-profile.pdf', temp_dir_path + 'varga-espn-profile')
     ]
 
-    clearstream.create_txt_from_url(sources[0][0], sources[0][1])
-    clearstream.create_txt_from_pdf(sources[1][0])
+    clearstream.create_txt_from_pdf(*sources[3])
 
 def import_iwf_results():
 
@@ -102,9 +103,10 @@ def clean_database():
     db['events'].remove({})
 
 def main():
-    clean_database()
-    import_iwf_results()
-    import_usaw_results()
+    test_clearstream()
+    # clean_database()
+    # import_iwf_results()
+    # import_usaw_results()
 
 if __name__ == '__main__':
     main()

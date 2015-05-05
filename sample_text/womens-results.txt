@@ -1,0 +1,64 @@
+CATEGORY LIFT RANK RESULT          NAME                     BORN NATION
+                1    85   TAN Yayun                     18.11.1992 CHN
+        Snatch  2    84   OZKAN KONAK Sibel             03.03.1988 TUR
+                3    81   KHAMSRI Panida                13.01.1989 THA
+                1    109 TAN Yayun                      18.11.1992 CHN
+   48   C&Jerk 2     108 KHAMSRI Panida                 13.01.1989 THA
+                3    106 AGUSTIANI Sri Wahyuni          13.08.1994 INA
+                1    194 TAN Yayun                      18.11.1992 CHN
+        Total   2    189 OZKAN KONAK Sibel              03.03.1988 TUR
+                3    189 KHAMSRI Panida                 13.01.1989 THA
+                1    99   HSU Shu-Ching                 09.05.1991 TPE
+        Snatch  2    98   CHINSHANLO Zulfiya            25.07.1993 KAZ
+                3    96   LI Yajun                      27.04.1993 CHN
+                1    134 CHINSHANLO Zulfiya             25.07.1993 KAZ
+   53   C&Jerk 2     119 HSU Shu-Ching                  09.05.1991 TPE
+                3    118 LI Yajun                       27.04.1993 CHN
+                1    232 CHINSHANLO Zulfiya             25.07.1993 KAZ
+        Total   2    218 HSU Shu-Ching                  09.05.1991 TPE
+                3    214 LI Yajun                       27.04.1993 CHN
+                1    106 SRISURAT Sukanya               03.05.1995 THA
+        Snatch  2    105 DENG Mengrong                  05.03.1990 CHN
+                3    100 ALVAREZ CAICEDO Yenny Fernanda 24.05.1995 COL
+                1    133 RI Jong Hwa                    16.10.1990 PRK
+   58   C&Jerk 2     131 GULNOI Rattikan                17.07.1993 THA
+                3    130 DENG Mengrong                  05.03.1990 CHN
+                1    235 DENG Mengrong                  05.03.1990 CHN
+        Total   2    232 RI Jong Hwa                    16.10.1990 PRK
+                3    231 SRISURAT Sukanya               03.05.1995 THA
+                1    113 BEGAJ Romela                   02.11.1986 ALB
+        Snatch  2    113 GORICHEVA Karina               08.04.1993 KAZ
+                3    112 TURIEVA Tima                   22.06.1992 RUS
+                1    142 DENG Wei                       14.02.1993 CHN
+   63   C&Jerk 2     140 CHOE Hyo Sim                   05.12.1993 PRK
+                3    140 TURIEVA Tima                   22.06.1992 RUS
+                1    252 DENG Wei                       14.02.1993 CHN
+        Total   2    252 TURIEVA Tima                   22.06.1992 RUS
+                3    248 CHOE Hyo Sim                   05.12.1993 PRK
+                1    120 RYO Un Hui                     09.08.1994 PRK
+        Snatch  2    118 CHEN Youjuan                   06.02.1989 CHN
+                3    118 ZHAPPARKUL Zhazira             22.12.1993 KAZ
+                1    145 RYO Un Hui                     09.08.1994 PRK
+   69   C&Jerk  2    144 ZHAPPARKUL Zhazira             22.12.1993 KAZ
+                3    143 SAZANAVETS Dzina               25.10.1990 BLR
+                1    265 RYO Un Hui                     09.08.1994 PRK
+        Total   2    262 ZHAPPARKUL Zhazira             22.12.1993 KAZ
+                3    261 CHEN Youjuan                   06.02.1989 CHN
+                1    126 EVSTIUKHINA Nadezhda           27.05.1988 RUS
+        Snatch  2    126 KANG Yue                       08.10.1991 CHN
+                3    126 KIM Un Ju                      11.11.1989 PRK
+                1    157 KIM Un Ju                      11.11.1989 PRK
+   75   C&Jerk  2    153 RIM Jong Sim                   05.02.1993 PRK
+                3    153 EVSTIUKHINA Nadezhda           27.05.1988 RUS
+                1    283 KIM Un Ju                      11.11.1989 PRK
+        Total   2    279 EVSTIUKHINA Nadezhda           27.05.1988 RUS
+                3    277 KANG Yue                       08.10.1991 CHN
+                1    155 KASHIRINA Tatiana              24.01.1991 RUS
+        Snatch  2    140 MENG Suping                    17.07.1989 CHN
+                3    132 PULSABSAKUL Chitchanok         04.11.1993 THA
+                1    193 KASHIRINA Tatiana              24.01.1991 RUS
+   +75  C&Jerk  2    180 MENG Suping                    17.07.1989 CHN
+                3    163 KHENJANTUEK Praeonapa          30.07.1992 THA
+                1    348 KASHIRINA Tatiana              24.01.1991 RUS
+        Total   2    320 MENG Suping                    17.07.1989 CHN
+                3    294 PULSABSAKUL Chitchanok         04.11.1993 THA
